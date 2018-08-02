@@ -1,4 +1,4 @@
-let myFirstName = prompt('What\'s your first name ?'); // 'declare' myFirstName 'Variable' and 'assign' Prompt 'function' for  user to input the 'argument' with the 'string' as their First Name
+let myFirstName = prompt('What\'s your first name ? '); // 'declare' myFirstName 'Variable' and 'assign' Prompt 'function' for  user to input the 'argument' with the 'string' as their First Name
 // 'declare' myLastName 'Variable' and 'assign' Prompt 'function' for user to input 'argument' with the 'string' as their Last Name
 console.log(myFirstName);
 let myLastName = prompt('What\'s your Last Name?'); 
@@ -54,24 +54,25 @@ let myAge2 = myAgeFunc2();
 console.log(myAge2);
 
 // 'declare' birthYear Variable and 'assign' Prompt function for user to input 'argument' with the 'number' as their birthYear
-let birthYear = prompt('What is your Birth Year?'); 
+let birthYear = prompt('What is your Birth Year? Format: ex 0000'); 
 console.log(birthYear);
 
 //
-let birthMonth = prompt('What is your Birth Month?');
+let birthMonth = prompt('What is your Birth Month? Format: ex 00');
 console.log(birthMonth);
 //
-let birthDate = prompt('What is your Birth Date?');
+let birthDate = prompt('What is your Birth Date? ex 00');
 console.log(birthDate);        
 //   
 let birthdayFunc = function(){
-    console.log(birthMonth + birthDate  + birthYear );
-    return birthMonth + birthDate + birthYear;
+    console.log( birthYear + birthMonth + birthDate);
+    return birthYear + birthMonth + birthDate;
 };
 
 //
 let birthday = birthdayFunc();
 console.log(birthday)
+
 //concatenate all the birthday prompts into one string for confirm prompt
 let entireBirthdayFunc = function(){
     console.log(birthMonth + '/'+ birthDate + '/' + birthYear + '?');
@@ -121,6 +122,68 @@ let validate1 = function(){
 //
 validate1();
 
+
+let today = new Date();
+let dd = today.getDate();
+let mm = today.getMonth()+1; 
+let yyyy = today.getFullYear();
+
+if(dd < 10) {
+    dd = '0' + dd
+} 
+
+if(mm < 10) {
+    mm = '0' + mm
+} 
+
+let todaysDate = yyyy + mm + dd;
+
+console.log('todays date is: ' +  todaysDate);
+
+todaysDate = parseInt(todaysDate);
+let year21Ago = todaysDate - 210000;
+console.log(year21Ago);
+
+// birthday is concatenated dob yearmonthdate
+//   birthday
+// // convert user dob to # 
+let birthdayNum = parseInt(birthday);
+console.log(birthdayNum);
+
+console.log(year21Ago > birthdayNum);
+if (year21Ago >= birthdayNum){
+    alert('Phew, you had me worried there');
+}
+else {
+    alert('Wait...Hold up. If your birthday is ' + birthMonth + '/'+ birthDate + '/' + birthYear + ', then how are you 21?');    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //
 let favGenre = prompt('What\'s your favorite genre of music?');
 console.log(favGenre);
@@ -152,37 +215,22 @@ let mySeason1func = function(){
 //
 let mySeason1 = mySeason1func();
 
-console.log(myFirstName + " " + myLastName);
-console.log(fullNameFunc);
-console.log(myAge);
-console.log(birthYear);
-console.log(birthMonth);
-console.log(birthDate);
-console.log(birthday);
-//console.log(fullValidate);
-
-console.log(myGenre1);
-console.log(mySeason1);
-
-
 
 // declares the variable "element name" an assigning the variable of a 'function' call for the document HTML id to the 'string' 'argumenty
 let elName = document.getElementById('name'); 
-
 // associates inner body HTML id with assigned JavaScript Variable
 elName.innerHTML = fullNameFunc;
-
 // prints the element name 
 console.log(elName);
 
 // declares the variable "element name" as function for document HTML id to  'string'
 let elName2 = document.getElementById('age');
-
-elName2.innerHTML = myAge2;
-
-console.log(elName2);
-
 //
+elName2.innerHTML = myAge2;
+//
+console.log(elName2);
+//
+
 let elName3 = document.getElementById('music');
 
 elName3.innerHTML = myGenre1;
@@ -195,172 +243,4 @@ let elName4 = document.getElementById('season');
 elName4.innerHTML = mySeason1;
 
 console.log(elName4);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//D.O.B 21 y.o. age Validation    
-
-//let x = birthDate.getUTCDate()
-//let y =  birthMonth.getUTCMonth()
-//let z =  birthYear.getUTCFullYear()
-
-// let uhh = alert('Wait...Hold up. If your birthday is ' + birthMonth + '/'+ birthDate + '/' + birthYear + ' then how are you 21?');
-// let nice = alert('Phew, you had me worried there');
-// let nice = function();{
-//     return console.log(true); 
-// };
-// let uhh = function();{
-//     console.log(false);
-//     return 
-// }
-
-// while (birthMonth + '/'+ birthDate + '/' + birthYear); { 
-//         if (birthYear < getUTCFullYear(num) - 21) {
-//              console.log(true);
-//              return 
-//                 alert('Phew, you had me worried there');
-        
-//        }else if{ (birthYear > (getUTCFullYear(num) - 21))
-//                 console.log(false);
-//             alert('Wait...Hold up. If your birthday is ' + birthMonth + '/'+ birthDate + '/' + birthYear + ' then how are you 21?');   
-        
-//        }else if ((((birthYear == (getUTCFullYear(num) - 21)) && birthMonth <= getUTCMonth() && birthDate <= getUTCDate()))){
-//              console.log(true); 
-//                 alert('Phew, you had me worried there');
-//        
-//        }else((((birthYear == (getUTCFullYear(num) - 21)) && birthMonth >= getUTCMonth(num) && birthDate > (getUTCDate(num) + 1) || birthYear > (getUTCFullYear(num)-21)))); {
-//              console.log(false);
-//             alert('Wait...Hold up. If your birthday is ' + birthMonth + '/'+ birthDate + '/' + birthYear + ' then how are you 21?');    
-//             }   
-//     };
-
-
-
-
-//let birthYearFunc= function(){
-    // console.log(birthYear);
-    // let birthYearx = Object{bMonth}
-    
-    // let birthYearNum = exampleArray[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-  
-    // let birthMonthName = 
-    //     if ( i <= 12; && i >= 1; && i != 0);{
-    //         console.log(exampleArray[i];)
-            //return true;
-    //     } else { num === false }
-
-//}
-
-// 'declare' birthMonth Variable and 'assign' Prompt function for user to input 'argument' with the 'string' as their birthMonth
-// let birthMonth = prompt('What is your Birth Month?'); 
-//     //let birthMonthFunc =  function(){
-    // console.log(birthMonth);
-    // let birthMonthx = Object{bMonth}
-    
-    // let birthMonthNum = Array[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-    // let birthMonthString =  Array["January" , "February", "March", "April","May", "June", "July", "August", "September", "October", "November", "December" ];
-// 
-    // let birthMonthName = 
-    //     if ( x <= 12 && x >= 1 && x != 0);{
-    //         return true;
-    //     } else { num === false }
- 
-//'declare' birthDate Variable and 'assign' Prompt function for user to input 'argument' with the 'string' as their birthYear
-
-
-
-//let birthDateFunc =  function(){
-    // console.log(birthDate);
-    // let birthDatex = Object{bMonth}
-//let birthMonthName = 
-        //     if ( x <= 31 && x >= 1 && x != 0);{
-        //         return true;
-    //     } else { num === false }
-
-    
-//let birthDate1 = birthDateFunc();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//let year = 
-//const months = ["January" , "February", "March", "April","May", "June", "July", "August", "September", "October", "November", "December" ]
-// 
-//if(myAge) { 
- //console.log ('Hello ' + myName + 'I\'m older than 30 too');
-//} else {
-///  ('Hello ' + myName + 'you\'re so young');
-//}
-// if(agree=== true){
-//    alert('So your name is: ' +myFirstName + myLastName + '?');
-//}else {
-///alert('So your entire name is not ' + myFirstName + myLastName '?');
-
-///(agree2)
-
-
-
-//
-// let fullValidateFunc = function(){
-//     console.log( validate1 + validate2)
-//     return (validate1 + validate2)
-// }
-
-// //
-// while(fullValidateFunc);{
-//     if ((validate1 = true)) {
-//         console.log(true)
-//         return true;
-//     } else if (validate1 = false) {
-//         console.log(false)
-//         return false;
-    
-//     }else if(((((validate1 = false) && (validate2 = true)))) || (((((validate1 = false) && (validate2 = false)))))){
-//         console.log (false)
-//         return false;   
-//         };
-// };
-
-// //
-
-// //
-// let valConfFunc = function() {
-//    if (validate1 + validate2 === true){
-//      return true;
-//    }
-// }   
-
-// //
-// let fullValidate = valConfFunc();
-
-// //
-// let fullValidateFunctionConfirm = fullValidateFunc(); 
-
-
-
-
-
 
