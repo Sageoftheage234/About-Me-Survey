@@ -95,6 +95,7 @@ let validate2 = function(){
     let notDOB = confirm('So your Date of Birth is NOT ' + entireBirthDay);
     if(notDOB === true){
         console.log(true);
+
         validate3();
         return 'true';
         } 
@@ -160,23 +161,23 @@ else {
 
 
 
+let congratulations = alert('Thank you. I only have a couple more questions for you!');
+console.log(congratulations);
 
+let congratsConfirm = confirm('Is that okay?');
+console.log(congratsConfirm);
 
+if (congratsConfirm = true){
+    alert('Great!');
+} 
+else { 
+    alert('I promise it won\'t take that long!');
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// declare a new function expression that will take in a parameter called str. and call the alert
+function newFunc(str){
+        alert(str)
+}
 
 
 
@@ -243,4 +244,5 @@ let elName4 = document.getElementById('season');
 elName4.innerHTML = mySeason1;
 
 console.log(elName4);
+
 
