@@ -174,13 +174,72 @@ else {
     alert('I promise it won\'t take that long!');
 }
 
-// declare a new function expression that will take in a parameter called str. and call the alert
-function newFunc(str){
-        alert(str)
-}
+// daclare the captchaArray variable 
+ let captchaArray = ['What Race is Barack Obama? ex. Native American', 'Who is the King of Pop?', 'Who is the most famous basketball player in history?']
+
+
+function captchaFunction(){
+    let captchaIndex = Math.floor(Math.random() * captchaArray.length);
+    let captcha = captchaArray[captchaIndex]
+    let correctAnswer = ['African American', 'Michael Jackson', 'Michael Jordan']
+    let result = prompt(captcha);
+        if(result === correctAnswer[captchaIndex]) {
+            alert ('hello human')
+        }
+        else {
+            alert('Sorry Robot')
+        }
+}       
+
+// OR IF YOU WANT UNCOMMENT BELOW 
+//     let answerArray = []
+// for(let i = 0; i < captchaArray.length; i++){
+//     let result = prompt(captchaArray[i]);
+//     answerArray.push(result);
+    
+//      if(correctAnswer[i] !== answerArray[i]){
+//          alert ('Sorry Robot')
+//          return        
+//         }
+//     }
+//     alert('Hello Human')  
+//  }
+  
+ 
+captchaFunction();
 
 
 
+
+
+
+// // declare a variable  with the name of nameArrayand assigning the value of an array
+// let nameArray = ['', ]
+
+
+// // declare a new function expression that will take in a parameter called str. and call the alert
+// function newFunc(str){
+//         alert(str)
+// }
+
+// // declare new variable for a loop that loops through nameArray for as many values as exist and console
+// function nameFunc(){
+
+// // declare new variable called sentence and assign it the value of empty string
+//     let userVar = '';
+// // write a for loop that will loop through the nameArray
+//     for(let i = 0; i < nameArray.length; i++){
+//         // console.log(nameArray[i]);
+//         // concatenate the value of userVar with the value of index os i and space 
+//     userVar += nameArray[i] + ' ';
+//     } 
+
+// //invove the newFunc with an argement of the value of userVar  which will ...
+//     newFunc(userVar);
+
+// }   
+// // invoking or calling nameFunc
+//  nameFunc();
 
 
 
