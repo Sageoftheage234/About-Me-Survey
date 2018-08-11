@@ -1,5 +1,5 @@
 h1{
-    background-image:  url(https://cdn.wallpapersafari.com/14/23/dsxYlX.jpg);
+    background-image: url(https://cdn.wallpapersafari.com/14/23/dsxYlX.jpg);
     font: 300 150px/1.1 ;
     font-family: "Times New Roman", Times, serif;
     color: crimson;
@@ -15,7 +15,7 @@ h1{
 body{
     background-color: lightblue;
     font-family: "Times New Roman", Times, serif ;
-    text-align: justif ;
+    text-align: justify ;
     font-size: 10px;
 }
 
@@ -23,6 +23,7 @@ body{
 p {
     color: black;
     width: calc(100% /2);
+    font-size: 25px;
     margin: 10px;
     padding: 5px;
     border: solid 2px black;
@@ -44,15 +45,18 @@ p {
 
 .name {
     color: white;
+    font-size: 25px ;
 
 }
 
 .span{
-    background-color: green;
+    background-color: slategrey;
+    font-size: 25px ;
     }
 
 .answer{
     color: black;
+    font-size: 25px ;
     width: calc(100% /2);
     margin: 10px;
     padding: 5px;
