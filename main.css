@@ -1,7 +1,9 @@
 h1{
-    height: 150px;
+    background-image:  url(https://cdn.wallpapersafari.com/14/23/dsxYlX.jpg);
     font: 300 150px/1.1 ;
     font-family: "Times New Roman", Times, serif;
+    color: crimson;
+    text-shadow:4px 4px 0px rgba(0,0,0,1);
     border-style: solid ;
     border-color: slateblue ;
     text-align: center; 
