@@ -13,7 +13,7 @@ h1{
 }
 
 body{
-    background-color: lightblue;
+    background-color: black;
     font-family: "Times New Roman", Times, serif ;
     text-align: justify ;
     font-size: 10px;
@@ -21,7 +21,7 @@ body{
 
 
 p {
-    color: black;
+    color: lightblue;
     width: calc(100% /2);
     font-size: 25px;
     margin: 10px;
@@ -55,7 +55,7 @@ p {
     }
 
 .answer{
-    color: black;
+    color: lightblue;
     font-size: 25px ;
     width: calc(100% /2);
     margin: 10px;
